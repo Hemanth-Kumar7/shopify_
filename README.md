@@ -1,1 +1,1 @@
-Click: https://shopi5.netlify.app/
+Please Visit : https://shopi5.netlify.app/
