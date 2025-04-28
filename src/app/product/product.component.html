@@ -1,0 +1,8 @@
+<img [src]="imgLink" alt={{title}} class="h-40">
+<h2>{{title}}</h2>
+<p><strong>Price:</strong>{{price}}</p>
+<button class="py-2 px-5 bg-slate-800  rounded-2xl text-amber-50" (click)="fun()">Show details</button>
+<div *ngIf="show" class="absolute ml-85 -mt-40 bg-slate-800 border-3 border-amber-300 text-white rounded-2xl w-80 p-5 animate-none">
+    <button (click)="close()" class="text-slate-800 bg-amber-300 w-7 m-auto font-bold rounded-2xl">X</button>
+    <p>{{description}}</p>
+</div>

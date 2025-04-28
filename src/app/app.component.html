@@ -1,0 +1,23 @@
+<!-- Header Section -->
+ <app-header mode=isDark></app-header>
+ <div class=" ml-2 mt-5" [ngClass]="{'dark':isDark}">
+    <button class="flex gap-2 bg-gray-700 text-white font-semibold px-2 py-2 hover:bg-gray-400 hover:text-black rounded ring-2 ring-gray-400" (click)="changeMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z" clip-rule="evenodd" />
+        </svg>
+    </button>
+ </div>
+
+<!-- Body Section -->
+<!-- Grid -->
+<div class=" products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl py-10 gap-5" [ngClass]="{'dark':isDark}">
+    <!-- Grid-Item -->
+    <div class=" product p-5 flex flex-col jusitfy-center items-center border-2 rounded-2xl shadow-2xl shadow-blue-200 hover:shadow-blue-600" *ngFor="let p of products">
+        <app-product imgLink={{p.image}} title={{p.title}} 
+            [price]="p.price" description={{p.description}}>
+        </app-product>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<app-footer mode=isDark></app-footer>
